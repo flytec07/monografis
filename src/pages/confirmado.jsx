@@ -16,8 +16,14 @@ export default function Home() {
   const conffetiRef = useRef(null)
 
   useEffect(() => {
-    setWidth(conffetiRef.current.clientWidth)
+    addEventListener('resize', () => {
+      setWidth(conffetiRef.current.clientWidth-15)
+      setHeight(conffetiRef.current.clientHeight)
+    })
+
+    setWidth(conffetiRef.current.clientWidth-15)
     setHeight(conffetiRef.current.clientHeight)
+    
   }, [])
 
   return (
