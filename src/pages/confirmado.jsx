@@ -73,7 +73,7 @@ export default function Home() {
         
         <LGPD />
 
-        <iframe style={ {display: 'none'} } src="https://go.hotmart.com/O38178035D?ap=d09f"></iframe>
+        {/* <iframe style={ {display: 'none'} } src="https://go.hotmart.com/O38178035D?ap=d09f"></iframe> */}
       </main>
 
       <footer>

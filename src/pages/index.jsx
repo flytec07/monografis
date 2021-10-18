@@ -165,7 +165,7 @@ export default function Home() {
         </section>
 
         <iframe style={ {display: 'none'} } name="contato"></iframe>
-        <iframe style={ {display: 'none'} } src="https://go.hotmart.com/O38178035D?ap=d09f"></iframe>
+        {/* <iframe style={ {display: 'none'} } src="https://go.hotmart.com/O38178035D?ap=d09f"></iframe> */}
         
         <LGPD />
       </main>
