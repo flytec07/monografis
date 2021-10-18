@@ -1,8 +1,12 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Styles from '../styles/LGPD.module.css'
 
 export default function LGPD() {
+
+    const [data, setData] = useState(null)
+    const [noscript, setNoscript] = useState(null)
 
     useEffect(() => {
 
@@ -33,18 +37,16 @@ export default function LGPD() {
         function marketing() {
             console.log('Função de marketing');
 
-            document.querySelector('head').insertAdjacentHTML('beforeend', `<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            setData( `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-TCZFP3K');</script>`) 
+            })(window,document,'script','dataLayer','GTM-TCZFP3K');` )
 
-            document.querySelector('body').insertAdjacentHTML('afterbegin', `<!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCZFP3K"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->`)
+            setNoscript(`<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCZFP3K"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>`)
         }
-        
+       
         function analytics() {
             console.log('Função de analytics');
         }
@@ -57,18 +59,26 @@ export default function LGPD() {
     }, []) 
      
     return (
-        <section className={Styles.lgpdContainer} id='lgpdContainer'>
-            <div className={Styles.lgpdContent} id='lgpdContent'>  
-                <p>
-                    Usamos cookies para personalizar sua experiência. Para saber mais acesse nossa <Link href="https://guiadamonografia.com.br/politica-de-privacidade/">
-                        <a>politica de privacidade</a>
-                    </Link>
-                </p>                
-                <div>
-                    <button className={Styles.lgpdRefuse} id='lgpdRefuse'>Recusar</button>
-                    <button className={Styles.lgpdAccept} id='lgpdAccept'>Aceitar</button>
+        <>
+            <Head>
+                <script dangerouslySetInnerHTML = {{ __html: data }} />
+            </Head>
+            
+            <noscript dangerouslySetInnerHTML={{ __html: noscript }} />
+
+            <section className={Styles.lgpdContainer} id='lgpdContainer'>
+                <div className={Styles.lgpdContent} id='lgpdContent'>  
+                    <p>
+                        Usamos cookies para personalizar sua experiência. Para saber mais acesse nossa <Link href="https://guiadamonografia.com.br/politica-de-privacidade/">
+                            <a>politica de privacidade</a>
+                        </Link>
+                    </p>                
+                    <div>
+                        <button className={Styles.lgpdRefuse} id='lgpdRefuse'>Recusar</button>
+                        <button className={Styles.lgpdAccept} id='lgpdAccept'>Aceitar</button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     )
 }
