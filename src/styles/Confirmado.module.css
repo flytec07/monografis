@@ -43,8 +43,8 @@
     border-radius: var(--border-radius);
     padding: var(--spacing-3) var(--spacing-2);
     cursor: pointer;
-  }
-  
-  .btn:hover { 
+}
+
+.btn:hover { 
     background: rgba(255, 152, 0, 0.9);
-  }
+}
