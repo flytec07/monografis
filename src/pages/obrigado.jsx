@@ -2,11 +2,11 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '/public/img/logo-monografis-570x112.png'
-import styles from '../styles/Confirmado.module.css'
+import styles from '../styles/Obrigado.module.css'
 import Confetti from "react-confetti"
 import { useState, useEffect, useRef } from 'react'
 
-export default function Home() {
+export default function Obrigado() {
   
   const [width, setWidth] = useState(null)
   const [height, setHeight] = useState(null)
