@@ -146,7 +146,7 @@ export default function Home() {
           
           <input type="text" id='email' className="general-input" placeholder="Seu melhor e-mail" name="email" email-service-value="email" klickart-edit-not-highlight="" data-klickart-form-autofill-options="{&quot;parameter&quot;:&quot;email&quot;}" klickart-edit-placeholder-id="k1h8jiyv" aria-required="true" required />
 
-          <button className={styles.btn}>QUERO ME INSCREVER AGORA!</button>
+          <button className={styles.btn} id='inscrever'>QUERO ME INSCREVER AGORA!</button>
       
           <div className="klickart-import-form-container"> 
             <input type="hidden" name="id" value="29041"/>
