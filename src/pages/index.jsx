@@ -65,7 +65,7 @@ export default function Home() {
 
     const form = document.querySelector('#form')
     form.addEventListener('submit', () => {
-      window.location.href = "/confirmado";
+      window.location.href = "/obrigado";
     })
 
 
