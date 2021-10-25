@@ -87,7 +87,7 @@ export default function Home() {
           <Image src={logo} alt='Logo do monografis' width={250} height={50}/>
         </div>
 
-        <h1><font className={styles.h3}>Workshop Gratuito Semana do TCC</font> <font className={styles.h1}>Como Fazer Um TCC Mais Rápido</font></h1>
+        <h1><font className={styles.h3}>Workshop Gratuito Semana do TCC</font> <font className={styles.h1}>Como Fazer Um TCC Em Pouco Tempo</font></h1>
         
         <p className={styles.caption}>Nesta semana mostrarei <strong>Como fazer um Capitulo de Referencial do Inicio ao Fim</strong>.</p>
 
