@@ -50,7 +50,7 @@ export default function Obrigado() {
         <h2>Conheça o Monografis 3.0</h2>
         
         <p>Orientador de TCC do Futuro. Ferramenta inovadora, desenvolvida por professores de banca, capaz de agilizar a escrita do seu TCC, Monografia, artigo, dissertação e Tese!</p>
-        <Link href='https://monografis.com.br/'>
+        <Link href='https://bit.ly/3Ce47zl'>
             <button className={styles.btn} id='btn3'>SAIBA MAIS CLICANDO AQUI</button>
         </Link>
     
